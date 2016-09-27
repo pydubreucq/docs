@@ -121,7 +121,7 @@ Set up Mattermost Server
 5. Create a system user and group called mattermost that will run this
    service
 
-   -  ``sudo useradd -r mattermost -U``
+   -  ``sudo useradd -r mattermost -U -d /opt/mattermost``
    -  Set the mattermost account as the directory owner by typing:
    -  ``sudo chown -R mattermost:mattermost /opt/mattermost``
    -  ``sudo chmod -R g+w /opt/mattermost``
@@ -154,6 +154,7 @@ Set up Mattermost Server
 
 7. Test the Mattermost Server
 
+   -  ``su - mattermost``
    -  ``cd /opt/mattermost/bin``
    -  Run the Mattermost Server by typing:
    -  ``./platform``
